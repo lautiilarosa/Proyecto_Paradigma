@@ -1,2 +1,5 @@
-package Interfaces;public interface Camiones {
+package Interfaces;
+
+public interface Camiones {
+    public void cantCamiones(int newCant);
 }
