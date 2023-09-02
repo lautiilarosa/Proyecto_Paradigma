@@ -1,5 +1,8 @@
 package Interfaces;
+import Entidades.Bodega;
 
 public interface Botellas {
-    public void actualizarBotellas(int newCant);
+    public default void actualizarBotellas(Bodega cantBotellas, int nuevaCantBotellas){
+        cantBotellas.setCantBotellas(nuevaCantBotellas);
+    }
 }

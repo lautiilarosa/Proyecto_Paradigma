@@ -1,6 +1,6 @@
 package Entidades;
 
-public class EtapasElaboracion {
+public abstract class EtapasElaboracion  {
     //Atributos
     protected int turno;
     protected String etapa;

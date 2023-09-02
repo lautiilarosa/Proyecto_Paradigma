@@ -1,30 +1,38 @@
 package Entidades;
+import java.util.ArrayList;
 
 public class Bodega {
-    private boolean[] uvasDisponibles;
-    public int mesActual;
-    public int cantCamiones;
-    public int cantBotellas;
-    public int cantBarriles;
-    public int cantToneles;
-    public Vino[] vinos;
+    private ArrayList<String> uvasDisponibles;
+    private ArrayList<String> uvasNoDisponibles;
+    private int mesActual;
+    private int cantCamiones;
+    private int cantBotellas;
+    private int cantBarriles;
+    private Vino[] vinos;
 
     //Constructor
-    public Bodega(boolean[] uvasDisponibles, int mesActual, int cantCamiones, int cantBotellas, int cantBarriles, int cantToneles, Vino[] vinos) {
+    public Bodega(ArrayList<String> uvasDisponibles, int mesActual, int cantCamiones, int cantBotellas, int cantBarriles,Vino[] vinos) {
         this.uvasDisponibles = uvasDisponibles;
         this.mesActual = mesActual;
         this.cantCamiones = cantCamiones;
         this.cantBotellas = cantBotellas;
         this.cantBarriles = cantBarriles;
-        this.cantToneles = cantToneles;
         this.vinos = vinos;
     }
 
-    public boolean[] getUvasDisponibles() {
+    public ArrayList<String> getUvasNoDisponibles() {
+        return uvasNoDisponibles;
+    }
+
+    public void setUvasNoDisponibles(ArrayList<String> uvasNoDisponibles) {
+        this.uvasNoDisponibles = uvasNoDisponibles;
+    }
+
+    public ArrayList<String> getUvasDisponibles() {
         return uvasDisponibles;
     }
 
-    public void setUvasDisponibles(boolean[] uvasDisponibles) {
+    public void setUvasDisponibles(ArrayList<String> uvasDisponibles) {
         this.uvasDisponibles = uvasDisponibles;
     }
 
@@ -58,14 +66,6 @@ public class Bodega {
 
     public void setCantBarriles(int cantBarriles) {
         this.cantBarriles = cantBarriles;
-    }
-
-    public int getCantToneles() {
-        return cantToneles;
-    }
-
-    public void setCantToneles(int cantToneles) {
-        this.cantToneles = cantToneles;
     }
 
     public Vino[] getVinos() {

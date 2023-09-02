@@ -1,5 +1,8 @@
 package Interfaces;
+import Entidades.Bodega;
 
 public interface Barriles {
-    public void actualizarBarriles(int newCant);
+    public default void actualizarBarriles(Bodega cantBarriles,int nuevaCantBarriles){
+        cantBarriles.setCantBarriles(nuevaCantBarriles);
+    }
 }

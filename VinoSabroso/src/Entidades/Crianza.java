@@ -1,4 +1,5 @@
 package Entidades;
+import Interfaces.Barriles;
 
 public class Crianza extends EtapasElaboracion implements Barriles{
     private Bodega cantBarriles;

@@ -1,4 +1,5 @@
 package Entidades;
+import Interfaces.Camiones;
 
 public class TrasladoDeposito extends EtapasElaboracion implements Camiones{
     private Bodega cantCamiones;

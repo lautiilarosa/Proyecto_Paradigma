@@ -1,6 +1,7 @@
 package Entidades;
+import Interfaces.Botellas;
 
-public class Embotellamiento extends EtapasElaboracion implements Botellas{
+public class Embotellamiento extends EtapasElaboracion implements Botellas {
     //Atributos
     private String tipoBotella;
     private Bodega cantBotellas;
@@ -21,4 +22,5 @@ public class Embotellamiento extends EtapasElaboracion implements Botellas{
     public int getCantBotellas() {
         return cantBotellas.getCantBotellas();
     }
+
 }
