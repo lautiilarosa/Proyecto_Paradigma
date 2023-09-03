@@ -67,6 +67,7 @@ public class Main {
                         if (seguir.toUpperCase()=="NO" || seguir.toUpperCase()=="N"){
                             flag=false;}
                     }
+                    break;
                 case 5:
                     exit = true;
                     break;

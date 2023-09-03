@@ -7,6 +7,9 @@ public abstract class EtapasElaboracion  {
     //Constructores
     public EtapasElaboracion(){
     }
+    public EtapasElaboracion(int turno){
+        this.turno=turno;
+    }
     //Getters y Setters
     public int getTurno(){
         return turno;}

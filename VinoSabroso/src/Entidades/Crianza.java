@@ -6,6 +6,9 @@ public class Crianza extends EtapasElaboracion implements Barriles{
     // Constructor
     public Crianza(){
     }
+    public Crianza(int turno){
+        super(turno);
+    }
     public Crianza(Bodega bodega) {
         this.cantBarriles = bodega;
     }

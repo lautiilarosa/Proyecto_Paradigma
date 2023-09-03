@@ -5,7 +5,8 @@ public class Traslado extends EtapasElaboracion implements Camiones {
     // Constructor
     public Traslado(){
     }
-    public Traslado(Bodega bodega) {
+    public Traslado(Bodega bodega, int turno) {
+        super(turno);
         this.cantCamiones = bodega;
     }
 
