@@ -10,6 +10,7 @@ public class UvaServicios {
         System.out.println("Su apariencia: "+uva.getAparienciaVisual());
         System.out.println("Su aroma e intensidad: "+uva.getAromasIntensidad());
         System.out.println("Su cuerpo: "+uva.getCuerpo());
+        //System.out.println("Su etapa usual de crianza es: " + uva.getFechaCrianza());
         //System.out.println("El lugar de cosecha: "+uva.getLugarCosecha());
         //System.out.println("La fecha de cosecha: "+uva.getFechaCosecha());
     }

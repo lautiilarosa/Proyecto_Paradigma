@@ -61,7 +61,10 @@ public class Main {
                     ArrayList<String> uvasDisponibles = Main.calcularUvasDisponibles(mes);
                     System.out.println("La uvas disponibles para este mes son: ");
                     System.out.println(uvasDisponibles);
-                    int probando = ingresarUva();
+                    int tipo = ingresarUva();
+                    Uva nuevaUva = definirUva(tipo);
+
+
                     break;
                 case 2:
                     consultarEstadosVinos();
@@ -86,6 +89,20 @@ public class Main {
                     System.out.println("Ingrese una opción válida, por favor");
             }
         }
+    }
+
+    //Método que recorre los valores de cada tipo de uva y se le asigna al objeto Uva
+    public static Uva definirUva(int tipo){
+        Uva uva = null;
+        int x = 1;
+        for (Uva valor : Uva.values()){
+            if (x == tipo){
+                uva = valor;
+                break;
+            }
+            else x ++;
+        }
+        return uva;
     }
 
     public static int ingresarUva() {
