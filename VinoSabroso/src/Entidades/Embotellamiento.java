@@ -7,11 +7,12 @@ public class Embotellamiento extends EtapasElaboracion implements Botellas {
     private Bodega cantBotellas;
 
     //Constructor
-    public Embotellamiento(String tipoBotella){
+    public Embotellamiento(String tipoBotella, Bodega bodega,int turno){
+        super(turno);
         this.tipoBotella=tipoBotella;
-    }
-    public Embotellamiento(Bodega bodega) {
         this.cantBotellas = bodega;
+    }
+    public Embotellamiento() {
     }
 
     //Getters y Setters

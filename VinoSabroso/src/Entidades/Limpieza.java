@@ -5,7 +5,8 @@ public class Limpieza extends EtapasElaboracion{
     private int fase;
 
     //Constructor
-    public Limpieza(int fase){ //???
+    public Limpieza(int fase, int turno){ //???
+        super(turno);
         this.fase=fase;
     }
     public Limpieza(){

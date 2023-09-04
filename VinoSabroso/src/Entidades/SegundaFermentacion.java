@@ -5,7 +5,8 @@ public class SegundaFermentacion extends EtapasElaboracion{
     private String tipo;
 
     //Constructor
-    public SegundaFermentacion(String tipo){
+    public SegundaFermentacion(String tipo, int turno){
+        super(turno);
         this.tipo=tipo;}
 
     //Getters y Setters
