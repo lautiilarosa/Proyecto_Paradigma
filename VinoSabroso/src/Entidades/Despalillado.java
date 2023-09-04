@@ -5,8 +5,10 @@ public class Despalillado extends EtapasElaboracion{
     private String tipo;
 
     //Constructor
-    public Despalillado(String tipo){
-        this.tipo=tipo;}
+    public Despalillado(String tipo,int turno){
+        super(turno);
+        this.tipo=tipo;
+    }
 
     //Getters y Setters
     public String getTipo(){
