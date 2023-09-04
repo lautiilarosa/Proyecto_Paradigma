@@ -76,4 +76,12 @@ public enum Uva {
         return maridaje;
     }
 
+    public static void mostrarUvas() {
+        int contador = 1;
+        for (Uva tiposUva : Uva.values()) {
+            System.out.println(contador + ": " + tiposUva);
+            contador++;
+        }
+    }
+
 }

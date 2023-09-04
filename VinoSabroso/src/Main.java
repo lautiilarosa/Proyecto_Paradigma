@@ -17,20 +17,19 @@ public class Main {
         int tipo=0;
         do {
             System.out.println("Elija el tipo de vino el cual desea ver sus características");
-            TipoUva.mostrarUvas();
+            Uva.mostrarUvas();
             tipo = scan.nextInt();
         }while(tipo<0 || tipo>15);
         tipo--;
-        TipoUva[] tiposUvas = TipoUva.values();
+        Uva[] tiposUvas = Uva.values();
         System.out.println(tiposUvas[tipo]+":");
-        System.out.println("Sabor: "+tiposUvas[tipo].getSabor);
-        System.out.println("Aroma: "+tiposUvas[tipo].getAromaIntensidad);
-        System.out.println("Cuerpo: "+tiposUvas[tipo].getCuerpo);
-        System.out.println("Apariencia visual: "+tiposUvas[tipo].getAparienciaVisual);
-        System.out.println("Lugar de cosecha: "+tiposUvas[tipo].getLugarCosecha);
-        System.out.println("Epoca de cosecha: "+tiposUvas[tipo].getEpocaCosecha);
-        System.out.println("Grado de alcohol: "+tiposUvas[tipo].getGradoAlcohol);
-        System.out.println("Maridaje: "+tiposUvas[tipo].getMaridaje);
+        System.out.println("Sabor: "+tiposUvas[tipo].getSabor());
+        System.out.println("Aroma: "+tiposUvas[tipo].getAromasIntensidad());
+        System.out.println("Cuerpo: "+tiposUvas[tipo].getCuerpo());
+        System.out.println("Apariencia visual: "+tiposUvas[tipo].getAparienciaVisual());
+        System.out.println("Lugar de cosecha: "+tiposUvas[tipo].getLugarCosecha());
+        System.out.println("Epoca de cosecha: "+tiposUvas[tipo].getFechaCosecha());
+        System.out.println("Maridaje: "+tiposUvas[tipo].getMaridaje());
     }
 
 
@@ -57,10 +56,19 @@ public class Main {
             int eleccion = scan.nextInt();
             switch (eleccion) {
                 case 1:
+                    //para consutltar uvas disponibles:
+                    ArrayList<String> uvasDisponibles = Main.calcularUvasDisponibles(mes);
+                    System.out.println("La uvas disponibles para este mes son: ");
+                    System.out.println(uvasDisponibles);
+
+                    break;
+
                 case 2:
                     consultarEstadosVinos();
+                    break;
                 case 3:
                     retirarVinos();
+                    break;
                 case 4:
                     boolean flag = true;
                     while (flag){
@@ -101,9 +109,6 @@ public class Main {
         }
         return uvasDisponibles;
 
-        // para consutltar uvas disponibles:
-        //ArrayList<String> uvasDisponibles = Main.calcularUvasDisponibles(mes);
-        //System.out.println(uvasDisponibles);
     }
 }
 
