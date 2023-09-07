@@ -1,5 +1,4 @@
 package Entidades;
-import Interfaces.Botellas;
 
 public class Embotellamiento extends EtapasElaboracion implements Botellas {
     //Atributos

@@ -1,78 +1,38 @@
 package Entidades;
 import java.util.ArrayList;
-
+/**
+ * Clase Bodega para guardar los datos ingresados por el usuario
+ * @version 1.0, 7/9/2023
+ * @author Paulina Suden
+ */
 public class Bodega {
-    private ArrayList<String> uvasDisponibles;
-    private ArrayList<String> uvasNoDisponibles;
-    private int mesActual;
-    private int cantCamiones;
-    private int cantBotellas;
-    private int cantBarriles;
-    private Vino[] vinos;
+    private ArrayList<Uva> uvasIngresadas;
+    private int mesIngresado;
+
+    /**
+     * @param uvasIngresadas guarda un ArrayList con las características de todas las uvas ingresadas
+     * @param mesIngresado guarda el mes que ingresó el usuario
+     */
 
     //Constructor
-    public Bodega(ArrayList<String> uvasDisponibles, int mesActual, int cantCamiones, int cantBotellas, int cantBarriles,Vino[] vinos) {
-        this.uvasDisponibles = uvasDisponibles;
-        this.mesActual = mesActual;
-        this.cantCamiones = cantCamiones;
-        this.cantBotellas = cantBotellas;
-        this.cantBarriles = cantBarriles;
-        this.vinos = vinos;
+    public Bodega(ArrayList<Uva> uvasIngresadas, int mesIngresado) {
+        this.uvasIngresadas = uvasIngresadas;
+        this.mesIngresado = mesIngresado;
+
     }
 
-    public ArrayList<String> getUvasNoDisponibles() {
-        return uvasNoDisponibles;
+    //Getters
+    public ArrayList<Uva> getUvasIngresadas() {
+        return uvasIngresadas;
     }
 
-    public void setUvasNoDisponibles(ArrayList<String> uvasNoDisponibles) {
-        this.uvasNoDisponibles = uvasNoDisponibles;
+    public int getMesIngresado() {
+        return mesIngresado;
     }
 
-    public ArrayList<String> getUvasDisponibles() {
-        return uvasDisponibles;
+    public void setMesIngresado(int mesIngresado) {
+        this.mesIngresado = mesIngresado;
     }
 
-    public void setUvasDisponibles(ArrayList<String> uvasDisponibles) {
-        this.uvasDisponibles = uvasDisponibles;
-    }
-
-    public int getMesActual() {
-        return mesActual;
-    }
-
-    public void setMesActual(int mesActual) {
-        this.mesActual = mesActual;
-    }
-
-    public int getCantCamiones() {
-        return cantCamiones;
-    }
-
-    public void setCantCamiones(int cantCamiones) {
-        this.cantCamiones = cantCamiones;
-    }
-
-    public int getCantBotellas() {
-        return cantBotellas;
-    }
-
-    public void setCantBotellas(int cantBotellas) {
-        this.cantBotellas = cantBotellas;
-    }
-
-    public int getCantBarriles() {
-        return cantBarriles;
-    }
-
-    public void setCantBarriles(int cantBarriles) {
-        this.cantBarriles = cantBarriles;
-    }
-
-    public Vino[] getVinos() {
-        return vinos;
-    }
-
-    public void setVinos(Vino[] vinos) {
-        this.vinos = vinos;
-    }
+    //public void setUvasIngresadas(ArrayList<Uva> uvasIngresadas) { this.uvasIngresadas = uvasIngresadas; }
 }

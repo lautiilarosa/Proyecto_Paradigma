@@ -1,67 +1,34 @@
 package Entidades;
 import java.time.LocalDate;
+/**
+ * Clase Vino guarda los detalles de cada vino
+ * @version 1.0, 7/9/2023
+ * @author Paulina Suden
+ */
 public class Vino {
-    private String nombreVino;
     private int id;
     private Uva uva;
-    private LocalDate fechaIngreso;
-    private int contadorEstado;
-    private String Estado;
+    private int etapa;
 
-    public Vino(String nombreVino, int id, Uva uva, LocalDate fechaIngreso, int contadorEstado, String estado) {
-        this.nombreVino = nombreVino;
+    /**
+     * @param id identifica el vino
+     * @param uva guarda todas las características de dicho vino
+     * @param etapa guarda la etapa actual de elaboración del vino
+     */
+
+    //Constructor
+    public Vino(int id, Uva uva, int etapa) {
         this.id = id;
         this.uva = uva;
-        this.fechaIngreso = fechaIngreso;
-        this.contadorEstado = contadorEstado;
-        Estado = estado;
+        this.etapa = etapa;
     }
 
-    public String getNombreVino() {
-        return nombreVino;
+    //Get y Set de etapa
+    public int getEtapa() {
+        return etapa;
     }
 
-    public void setNombreVino(String nombreVino) {
-        this.nombreVino = nombreVino;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Uva getUva() {
-        return uva;
-    }
-
-    public void setUva(Uva uva) {
-        this.uva = uva;
-    }
-
-    public LocalDate getFechaIngreso() {
-        return fechaIngreso;
-    }
-
-    public void setFechaIngreso(LocalDate fechaIngreso) {
-        this.fechaIngreso = fechaIngreso;
-    }
-
-    public int getContadorEstado() {
-        return contadorEstado;
-    }
-
-    public void setContadorEstado(int contadorEstado) {
-        this.contadorEstado = contadorEstado;
-    }
-
-    public String getEstado() {
-        return Estado;
-    }
-
-    public void setEstado(String estado) {
-        Estado = estado;
+    public void setEtapa(int etapa) {
+        this.etapa = etapa;
     }
 }

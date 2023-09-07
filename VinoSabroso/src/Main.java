@@ -63,8 +63,6 @@ public class Main {
                     System.out.println(uvasDisponibles);
                     int tipo = ingresarUva();
                     Uva nuevaUva = definirUva(tipo);
-
-
                     break;
                 case 2:
                     consultarEstadosVinos();
@@ -104,7 +102,6 @@ public class Main {
         }
         return uva;
     }
-
     public static int ingresarUva() {
         Scanner scan = new Scanner(System.in);
         System.out.println("A continuación elija la opción de la uva que desea ingresar:");

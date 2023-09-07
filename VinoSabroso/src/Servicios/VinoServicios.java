@@ -1,13 +1,19 @@
 package Servicios;
 import Entidades.Vino;
+/**
+ * Clase VinoServicios actualiza y muestra la etapa, y verifica si un vino ya se ha terminado de elaborar
+ * @version 1.0, 7/9/2023
+ * @author Paulina Suden
+ */
 public class VinoServicios {
-    public boolean terminado(Vino contadorEstado) {
-        return contadorEstado.getContadorEstado() == 9;
+    /**
+     * @return devuelve True o False dependiendo si se ha llegado a la última etapa
+     */
+    public boolean terminado(Vino id) { return id.getEtapa() == 9; }
+    public void actualizarEtapa(Vino etapa, int newEtapa) {
+        etapa.setEtapa(newEtapa);
     }
-    public void actualizarEstado(Vino estado, String newEstado) {
-        estado.setEstado(newEstado);
-    }
-    public void mostrarEstado(Vino estado) {
-        System.out.println("Estado actual: " +estado.getEstado());
+    public void mostrarEtapa(Vino etapa) {
+        System.out.println("Etapa actual: " +etapa.getEtapa());
     }
 }
