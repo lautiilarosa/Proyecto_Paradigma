@@ -7,54 +7,52 @@ import java.util.InputMismatchException;
 
 public class Main {
 
-    public static void consultarEstadosVinos(){
-
-    }
-    public static void retirarVinos(){
-
-    }
-    public static void mostrarCaracteristicas(){
-        Scanner scan = new Scanner(System.in);
-        int tipo=0;
-        do {
-            System.out.println("Elija el tipo de vino el cual desea ver sus características");
-            Uva.mostrarUvas();
-            tipo = scan.nextInt();
-        }while(tipo<0 || tipo>15);
-        tipo--;
-        Uva[] tiposUvas = Uva.values();
-        System.out.println(tiposUvas[tipo]+":");
-        System.out.println("Sabor: "+tiposUvas[tipo].getSabor());
-        System.out.println("Aroma: "+tiposUvas[tipo].getAromasIntensidad());
-        System.out.println("Cuerpo: "+tiposUvas[tipo].getCuerpo());
-        System.out.println("Apariencia visual: "+tiposUvas[tipo].getAparienciaVisual());
-        System.out.println("Lugar de cosecha: "+tiposUvas[tipo].getLugarCosecha());
-        System.out.println("Epoca de cosecha: "+tiposUvas[tipo].getFechaCosecha());
-        System.out.println("Maridaje: "+tiposUvas[tipo].getMaridaje());
-    }
-
-
     public static void main(String[] args) {
 
         //Bodega vinoSabroso = new Bodega();
         Scanner scan = new Scanner(System.in);
-        int mes=0;
-        do {
-            System.out.println("Ingrese el mes en el que se encuentra (con números del 1 al 12)");
-            mes = scan.nextInt();
-        }while (mes<1 || mes>12);
-
+        System.out.println("¡Bienvenido a Vino Sabroso!"+
+                "\t  \n");
+        System.out.println("Ingrese el mes en el que se encuentra (con números del 1 al 12)");
+        int mes=0;boolean flagMes = false;
+        do{
+            try {
+                mes = scan.nextInt();
+                if (mes >= 1 && mes <= 12) {
+                    flagMes = true;
+                } else {
+                    flagMes = false;
+                    System.out.println("El mes debe estar en el rango de 1 a 12.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Por favor, ingrese un número válido.");
+                scan.nextLine(); // "Limpiar" el búfer de entrada para evitar un bucle infinito.
+            }
+        }while(!flagMes);
         // ---------- Menú ----------
-        boolean exit = false;
-        while (exit==false){
-            System.out.println("Bienvenido a Vino Sabroso!");
-            System.out.println(" ");
-            System.out.println("1 - Ingresar un tipo de uva");
-            System.out.println("2 - Consultar estado de los vinos");
-            System.out.println("3 - Retirar vinos terminados");
-            System.out.println("4 - Ver características de un vino");
-            System.out.println("5 - Salir");
-            int eleccion = scan.nextInt();
+        boolean exit = false; boolean flagMenu = false;int eleccion =0;
+        while (!exit){
+            do{
+                System.out.println(" ");
+                System.out.println("1 - Ingresar un tipo de uva");
+                System.out.println("2 - Consultar estado de los vinos");
+                System.out.println("3 - Retirar vinos terminados");
+                System.out.println("4 - Ver características de un vino");
+                System.out.println("5 - Salir");
+                try {
+                    eleccion = scan.nextInt();
+                    if (eleccion >= 1 && eleccion <= 5) {
+                        flagMenu = true;
+                    } else {
+                        flagMenu = false;
+                        System.out.println("Debe ingresar un número entre 1 y 5.");
+                    }
+                } catch (InputMismatchException e) {
+                    System.out.println("Por favor, ingrese un número válido.");
+                    scan.nextLine(); // "Limpiar" el búfer de entrada
+                }
+            }while(!flagMenu);
+
             switch (eleccion) {
                 case 1:
                     //para consutltar uvas disponibles:
@@ -63,6 +61,8 @@ public class Main {
                     System.out.println(uvasDisponibles);
                     int tipo = ingresarUva();
                     Uva nuevaUva = definirUva(tipo);
+
+
                     break;
                 case 2:
                     consultarEstadosVinos();
@@ -71,16 +71,16 @@ public class Main {
                     retirarVinos();
                     break;
                 case 4:
-                    boolean flag = true;
-                    while (flag){
-                        mostrarCaracteristicas();
-                        System.out.println("¿Desea ver las características de otro vino? (SI/NO)");
-                        String seguir = scan.nextLine();
-                        if (seguir.toUpperCase()=="NO" || seguir.toUpperCase()=="N"){
-                            flag=false;}
+                    mostrarCaracteristicas();
+                    try {
+                        Thread.sleep(5000); // Pausa durante 5 segundos
+                    } catch (InterruptedException e) {
+                        // Manejar cualquier excepción
+                        e.printStackTrace();
                     }
                     break;
                 case 5:
+                    System.out.println("Gracias por usar Vino Sabroso. ¡¡Vuelva Pronto!!");
                     exit = true;
                     break;
                 default:
@@ -102,6 +102,7 @@ public class Main {
         }
         return uva;
     }
+
     public static int ingresarUva() {
         Scanner scan = new Scanner(System.in);
         System.out.println("A continuación elija la opción de la uva que desea ingresar:");
@@ -126,14 +127,14 @@ public class Main {
             try {
                 opcion = scan.nextInt();
                 if (opcion >= 1 && opcion <= 15) { entradaValida = true;
-                } else if (opcion < 1 | opcion > 15) { entradaValida = false; }
+                } else { entradaValida = false; }
 
             } catch (InputMismatchException e) {
                 System.out.println("Por favor, ingrese un número entre 1 y 15.");
-                scan.nextLine(); // "Limpiar" el búfer de entrada para evitar un bucle infinito.
+                scan.nextLine(); // "Limpiar" el búfer de entrada
             }
         }
-    return opcion;
+        return opcion;
     }
 
     public static ArrayList<String> calcularUvasDisponibles(int mes) {
@@ -159,5 +160,43 @@ public class Main {
         return uvasDisponibles;
 
     }
-}
 
+    public static void consultarEstadosVinos(){
+
+    }
+    public static void retirarVinos(){
+
+    }
+
+    public static void mostrarCaracteristicas(){
+        Scanner scan = new Scanner(System.in);
+        int tipo=0;boolean flagTipoUva = false;
+        do{
+            Uva.mostrarUvas();
+            try {
+                tipo = scan.nextInt();
+                if (tipo >= 1 && tipo <= 15) {
+                    flagTipoUva = true;
+                } else {
+                    flagTipoUva = false;
+                    System.out.println("Debe ingresar un número entre 1 y 15.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Por favor, ingrese un número válido.");
+                scan.nextLine(); // "Limpiar" el búfer de entrada
+            }
+        }while(!flagTipoUva);
+        tipo--; //Ya que values() empieza de 0
+        Uva[] tiposUvas = Uva.values();
+        System.out.println(tiposUvas[tipo]+":");
+        System.out.println("Sabor: "+tiposUvas[tipo].getSabor());
+        System.out.println("Aroma: "+tiposUvas[tipo].getAromasIntensidad());
+        System.out.println("Cuerpo: "+tiposUvas[tipo].getCuerpo());
+        System.out.println("Apariencia visual: "+tiposUvas[tipo].getAparienciaVisual());
+        System.out.println("Lugar de cosecha: "+tiposUvas[tipo].getLugarCosecha());
+        System.out.println("Epoca de cosecha: "+tiposUvas[tipo].getFechaCosecha());
+        System.out.println("Maridaje: "+tiposUvas[tipo].getMaridaje());
+    }
+
+
+}
