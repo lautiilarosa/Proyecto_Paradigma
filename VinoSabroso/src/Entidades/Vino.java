@@ -1,4 +1,6 @@
 package Entidades;
+import Entidades.Uvas.Uva;
+
 import java.time.LocalDate;
 /**
  * Clase Vino guarda los detalles de cada vino

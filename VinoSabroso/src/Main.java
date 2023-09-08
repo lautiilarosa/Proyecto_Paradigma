@@ -1,6 +1,6 @@
-import Entidades.* ;
+import Entidades.Uvas.Uva;
+
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
