@@ -9,7 +9,7 @@ import java.time.LocalDate;
  */
 public class Vino {
     private int id;
-    private Uva uva;
+    public Uva uva;
     private int etapa;
 
     /**

@@ -1,7 +1,7 @@
 package Menu;
 
 public class ConsultarEstados {
-    public static void consultarEstadosVinos(){
+    //Constructor
+    public static void consultarEstadosVinos(){}
 
-    }
 }
