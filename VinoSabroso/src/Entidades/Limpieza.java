@@ -1,21 +1,24 @@
 package Entidades;
 
+/**
+ * Clase Limpieza para definir una de las etapas de producción
+ * @version 1.0, 7/9/2023
+ * @author Paula Martinez
+ */
+
+
 public class Limpieza extends EtapasElaboracion{
     //Atributos
-    private int fase;
 
+    /**
+     * @param tiempo indica el tiempo que tarda esta etapa dependiendo el tipo de vino
+     */
     //Constructor
-    public Limpieza(int fase, int turno){ //???
-        super(turno);
-        this.fase=fase;
+    public Limpieza(int tiempo){ //???
+        super(tiempo);
     }
     public Limpieza(){
     }
 
-    //Getters y Setters
-    public int getFase(){
-        return fase;}
-    public void setFase(int fase){
-        this.fase=fase;}
 
 }
