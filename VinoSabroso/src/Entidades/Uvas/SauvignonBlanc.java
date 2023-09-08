@@ -4,8 +4,8 @@ package Entidades.Uvas;
  * @version 1.0 , 07/09/2023
  * @author Lautaro Larosa
  */
-public class SauvignongBlanc extends Uva{
-    public SauvignongBlanc(){
+public class SauvignonBlanc extends Uva{
+    public SauvignonBlanc(){
         tipoUva = "Blanca";
         aparienciaVisual = "Tono amarillo pálido";
         aroma = "Refrescante";

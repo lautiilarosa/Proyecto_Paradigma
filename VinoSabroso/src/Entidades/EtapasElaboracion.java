@@ -18,7 +18,6 @@ public abstract class EtapasElaboracion  {
     //Constructores
 
     public EtapasElaboracion(){
-
     }
 
     /**

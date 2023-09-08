@@ -5,7 +5,9 @@ import java.util.Scanner;
 import java.util.InputMismatchException;
 
 public class Menu {
-    public static void menu(){
+    public Menu(){
+    }
+    public static void mostrarMenu(){
         Scanner scan = new Scanner(System.in);
         boolean exit = false; boolean flagMenu = false;int eleccion =0;
         while (!exit) {
@@ -44,12 +46,12 @@ public class Menu {
                     ConsultarEstados.consultarEstadosVinos();
                     break;
                 case 3:
-                    cambiarEtapa();
+                    CambiarEtapa.cambiarEtapa();
                     break;
                 case 4:
-                    //mostrarCaracteristicas();
+                    Caracteristicas.mostrarCaracteristicas();
                     try {
-                        Thread.sleep(5000); // Pausa durante 5 segundos
+                        Thread.sleep(5000); // Pausa durante 5 segundos para que se vea mas "ordenado"
                     } catch (InterruptedException e) {
                         // Manejar cualquier excepción
                         e.printStackTrace();

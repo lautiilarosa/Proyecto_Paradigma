@@ -2,7 +2,7 @@ import Entidades.Uvas.Uva;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.InputMismatchException;
-import Enti
+import Menu.Menu;
 
 
 public class Main {
@@ -29,7 +29,8 @@ public class Main {
             }
         }while(!flagMes);
         // ---------- Menú ----------
-        Menu menu = Menu();
+        Menu menu = new Menu();
+        menu.mostrarMenu();
     }
 
 
