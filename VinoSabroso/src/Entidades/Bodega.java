@@ -1,5 +1,6 @@
 package Entidades;
 import java.util.ArrayList;
+import Entidades.Uvas.Uva;
 /**
  * Clase Bodega para guardar los datos ingresados por el usuario
  * @version 1.0, 7/9/2023
