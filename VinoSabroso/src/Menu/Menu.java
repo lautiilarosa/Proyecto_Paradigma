@@ -1,0 +1,69 @@
+package Menu;
+import Entidades.Uvas.Uva;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
+public class Menu {
+    public static void menu(){
+        Scanner scan = new Scanner(System.in);
+        boolean exit = false; boolean flagMenu = false;int eleccion =0;
+        while (!exit) {
+            do{
+                System.out.println(" ");
+                System.out.println("1 - Ingresar un tipo de uva");
+                System.out.println("2 - Consultar estado de los vinos");
+                System.out.println("3 - Cambiar de etapa");
+                System.out.println("4 - Ver características de un vino");
+                System.out.println("5 - Salir");
+                try {
+                    eleccion = scan.nextInt();
+                    if (eleccion >= 1 && eleccion <= 5) {
+                        flagMenu = true;
+                    } else {
+                        flagMenu = false;
+                        System.out.println("Debe ingresar un número entre 1 y 5.");
+                    }
+                } catch (InputMismatchException e) {
+                    System.out.println("Por favor, ingrese un número válido.");
+                    scan.nextLine(); // "Limpiar" el búfer de entrada
+                }
+            }while(!flagMenu);
+
+            switch (eleccion) {
+                case 1:
+                    //para constar uvas disponibles:
+                    //ArrayList<String> uvasDisponibles = Main.calcularUvasDisponibles(mes);
+                    //System.out.println("La uvas disponibles para este mes son: ");
+                    //System.out.println(uvasDisponibles);
+                    //int tipo = ingresarUva();
+                    //Uva nuevaUva = definirUva(tipo);
+
+                    break;
+                case 2:
+                    ConsultarEstados.consultarEstadosVinos();
+                    break;
+                case 3:
+                    cambiarEtapa();
+                    break;
+                case 4:
+                    //mostrarCaracteristicas();
+                    try {
+                        Thread.sleep(5000); // Pausa durante 5 segundos
+                    } catch (InterruptedException e) {
+                        // Manejar cualquier excepción
+                        e.printStackTrace();
+                    }
+                    break;
+                case 5:
+                    System.out.println("Gracias por usar Vino Sabroso. ¡¡Vuelva Pronto!!");
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Ingrese una opción válida, por favor");
+            }
+        }
+    }
+
+
+}
