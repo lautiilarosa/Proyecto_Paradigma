@@ -9,7 +9,8 @@ import java.time.LocalDate;
  */
 public class Vino {
     private int id;
-    public Uva uva;
+
+    private Uva uva;
     private int etapa;
 
     /**
@@ -33,4 +34,5 @@ public class Vino {
     public void setEtapa(int etapa) {
         this.etapa = etapa;
     }
+
 }

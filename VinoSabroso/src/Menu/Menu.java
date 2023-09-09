@@ -34,13 +34,12 @@ public class Menu {
 
             switch (eleccion) {
                 case 1:
-                    //para constar uvas disponibles:
-                    //ArrayList<String> uvasDisponibles = Main.calcularUvasDisponibles(mes);
-                    //System.out.println("La uvas disponibles para este mes son: ");
-                    //System.out.println(uvasDisponibles);
-                    //int tipo = ingresarUva();
-                    //Uva nuevaUva = definirUva(tipo);
-
+                    IngresarUva.ingresarUva();
+                    try {
+                        Thread.sleep(5000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     break;
                 case 2:
                     ConsultarEstados.consultarEstadosVinos();

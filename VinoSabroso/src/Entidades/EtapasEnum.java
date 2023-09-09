@@ -16,4 +16,13 @@ public enum EtapasEnum {
     Limpieza,
     Crianza,
     Embotellamiento;
+
+    public static void imprimirEtapas(){
+        int cont = 1;
+        for (EtapasEnum etapa : EtapasEnum.values()){
+            System.out.println(cont+": "+etapa);
+            cont += 1;
+        }
+        System.out.println("");
+    }
 }
