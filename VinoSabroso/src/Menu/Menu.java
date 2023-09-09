@@ -3,12 +3,22 @@ import Entidades.Uvas.Uva;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.InputMismatchException;
+import Entidades.Bodega;
+import Entidades.Vino;
+
+
+/**
+ * Clase Menu para mostrarle al usuario
+ * @version 1.0, 7/9/2023
+ */
 
 public class Menu {
     public Menu(){
     }
-    public static void mostrarMenu(){
+    public static void mostrarMenu(int mes,Bodega vinoSabroso){
+        boolean ingresoUva = false;
         Scanner scan = new Scanner(System.in);
+        int cont = 1;
         boolean exit = false; boolean flagMenu = false;int eleccion =0;
         while (!exit) {
             do{
@@ -17,7 +27,8 @@ public class Menu {
                 System.out.println("2 - Consultar estado de los vinos");
                 System.out.println("3 - Cambiar de etapa");
                 System.out.println("4 - Ver características de un vino");
-                System.out.println("5 - Salir");
+                System.out.println("5 - Consultar uvas terminadas");
+                System.out.println("6 - Salir");
                 try {
                     eleccion = scan.nextInt();
                     if (eleccion >= 1 && eleccion <= 5) {
@@ -34,7 +45,8 @@ public class Menu {
 
             switch (eleccion) {
                 case 1:
-                    IngresarUva.ingresarUva();
+                    IngresarUva.ingresarUva(cont,mes,vinoSabroso);
+                    ingresoUva = true;
                     try {
                         Thread.sleep(5000);
                     } catch (InterruptedException e) {
@@ -42,10 +54,28 @@ public class Menu {
                     }
                     break;
                 case 2:
-                    ConsultarEstados.consultarEstadosVinos();
+                    if (!ingresoUva){
+                        System.out.println("Por favor, primero ingrese una uva");
+                    } else {
+                        ConsultarEtapaActual.consultarEtapa(vinoSabroso.getListaVinos());
+                        try {
+                            Thread.sleep(5000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
                     break;
                 case 3:
-                    CambiarEtapa.cambiarEtapa();
+                    if (!ingresoUva){
+                        System.out.println("Por favor, primero ingrese una uva");
+                    } else {
+                        CambiarEtapa.cambiarDeEtapa(vinoSabroso.getListaVinos());
+                        try {
+                            Thread.sleep(5000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
                     break;
                 case 4:
                     Caracteristicas.mostrarCaracteristicas();
@@ -57,14 +87,17 @@ public class Menu {
                     }
                     break;
                 case 5:
+
+                    break;
+                case 6:
                     System.out.println("Gracias por usar Vino Sabroso. ¡¡Vuelva Pronto!!");
                     exit = true;
                     break;
                 default:
                     System.out.println("Ingrese una opción válida, por favor");
             }
+
         }
     }
-
 
 }

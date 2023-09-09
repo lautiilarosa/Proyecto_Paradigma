@@ -6,6 +6,7 @@ package Entidades.Uvas;
  */
 public class Chardonnay extends Uva {
     public Chardonnay(){
+        nombreUva = "Chardonnay";
         tipoUva = "Blanca";
         aparienciaVisual = "Amarillo Pálido";
         aroma = "Frutos frescos";

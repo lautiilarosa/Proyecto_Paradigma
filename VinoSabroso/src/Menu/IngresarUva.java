@@ -1,6 +1,7 @@
 package Menu;
 
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -13,18 +14,21 @@ import Servicios.BodegaServicios;
 
 /**
  * Clase IngresarUva en el cual el usuario ingresa y almacenamos un objeto uva en el objeto vino
+ * @version 1.0, 8/9/2023
  */
 
 public class IngresarUva {
+    public IngresarUva() {
+    }
 
-    public static void ingresarUva() {
-        Uva nuevaUva = null;
+    public static void ingresarUva(int cont, int mes, Bodega vinoSabroso) {
+        //Uva nuevaUva;
         Vino nuevoVino;
         Scanner scan = new Scanner(System.in);
 
         System.out.println("A continuación elija la opción entre 1 y 15 de la uva que desea ingresar:");
         TiposUva.imprimirTipoUva();
-        
+
         int opcion = 1;
         boolean entradaValida = false;
         while (!entradaValida) {
@@ -36,83 +40,89 @@ public class IngresarUva {
                 scan.nextLine(); // "Limpiar" el búfer de entrada
             }
         }
-        elegirUva(nuevaUva,opcion);
+        Uva nuevaUva = elegirUva(opcion);
         System.out.println("");
         System.out.println("Ahora ingrese la etapa entre 1 y 10 en la cual quiere que este su uva: ");
         EtapasEnum.imprimirEtapas();
 
         entradaValida = false;
-        while (!entradaValida){
-            try{
+        while (!entradaValida) {
+            try {
                 opcion = scan.nextInt();
                 entradaValida = opcion >= 1 && opcion <= 10;
 
-            }catch (InputMismatchException e){
+            } catch (InputMismatchException e) {
                 System.out.println("Error,ingrese un número entre 1 y 10.");
                 scan.nextLine();
             }
         }
 
-        nuevoVino = new Vino(0,nuevaUva,opcion);
-        Bodega.agregarUva(nuevaUva);
-        Bodega.agregarVino(nuevoVino);
+        nuevoVino = new Vino(cont, nuevaUva, opcion);
+        vinoSabroso.getUvasIngresadas().add(nuevaUva);
+        vinoSabroso.getListaVinos().add(nuevoVino);
+        vinoSabroso.mostrarUvas();
 
     }
+
+
 
     /**
      * Método elegirUva en donde creamos el objeto de la uva elegida por el usuario
      * @param opcion es la opción que eligió previamente el usuario
      * @return retorna finalmente el objeto de la clase correspodiente a esa uva
      */
-    public static Uva elegirUva(Uva nuevaUva, int opcion){
+    public static Uva elegirUva(int opcion){
         switch (opcion){
             case 1:
-                nuevaUva = new CabernetSauvignon();
-                break;
+                Uva nuevaUvaC = new CabernetSauvignon();
+                return nuevaUvaC;
             case 2:
-                nuevaUva = new Merlot();
-                break;
+                Uva nuevaUvaM = new Merlot();
+                return nuevaUvaM;
             case 3:
-                nuevaUva = new Tempranillo();
-                break;
+                Uva nuevaUvaT = new Tempranillo();
+                return nuevaUvaT;
             case 4:
-                nuevaUva = new Granacha();
-                break;
+                Uva nuevaUvaG = new Granacha();
+                return nuevaUvaG;
             case 5:
-                nuevaUva = new PinotNoir();
-                break;
+                Uva nuevaUvaP = new PinotNoir();
+                return nuevaUvaP;
             case 6:
-                nuevaUva = new Bonarda();
-                break;
+                Uva nuevaUvaB = new Bonarda();
+                return nuevaUvaB;
             case 7:
-                nuevaUva = new PinotGris();
-                break;
+                Uva nuevaUvaPG = new PinotGris();
+                return nuevaUvaPG;
             case 8:
-                nuevaUva = new Chardonnay();
-                break;
+                Uva nuevaUvaCC= new Chardonnay();
+                return nuevaUvaCC;
             case 9:
-                nuevaUva = new SauvignonBlanc();
-                break;
+                Uva nuevaUvaS = new SauvignonBlanc();
+                return nuevaUvaS;
             case 10:
-                nuevaUva = new Verdejo();
-                break;
+                Uva nuevaUvaV = new Verdejo();
+                return nuevaUvaV;
             case 11:
-                nuevaUva = new Albariño();
-                break;
+                Uva nuevaUvaA = new Albariño();
+                return nuevaUvaA;
             case 12:
-                nuevaUva = new Godello();
-                break;
+                Uva nuevaUvaGo = new Godello();
+                return nuevaUvaGo;
             case 13:
-                nuevaUva = new Malbec();
-                break;
+                Uva nuevaUvaMa = new Malbec();
+                return nuevaUvaMa;
             case 14:
-                nuevaUva = new CabernetFranc();
-                break;
+                Uva nuevaUvaCa = new CabernetFranc();
+                return nuevaUvaCa;
             case 15:
-                nuevaUva = new MoscatelAlejandria();
-                break;
+                Uva nuevaUvaMo = new MoscatelAlejandria();
+                return nuevaUvaMo;
+            default:
+                Uva nuevaUvaAA = new Albariño();
+                return nuevaUvaAA;
+
         }
-        return nuevaUva;
     }
 
 }

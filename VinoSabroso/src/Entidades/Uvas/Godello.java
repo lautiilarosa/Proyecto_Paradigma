@@ -6,6 +6,7 @@ package Entidades.Uvas;
  */
 public class Godello extends Uva {
     public Godello(){
+        nombreUva = "Godello";
         tipoUva = "Blanca";
         aparienciaVisual = "Color Amarillo Duradero";
         aroma = "Manzana";

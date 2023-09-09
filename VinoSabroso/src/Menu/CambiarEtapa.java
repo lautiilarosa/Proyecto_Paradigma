@@ -1,8 +1,13 @@
 package Menu;
 import Entidades.EtapasEnum;
+
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import Entidades.Vino;
+import Menu.ConsultarEtapaActual;
+
+import static Menu.ConsultarEtapaActual.consultarEtapaActual;
 
 public class CambiarEtapa {
     //Contructor
@@ -14,7 +19,33 @@ public class CambiarEtapa {
      * @author Paulina Suden
      * */
 
-    public void cambiarDeEtapa(Vino vino) {
+    public static void cambiarDeEtapa(ArrayList<Vino> listaVinos) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese el vino que quiere cambiarle la etapa");
+        int cont = 1;
+        for (Vino vino: listaVinos ){
+            System.out.println(cont +") " +vino.uva.getNombreUva());
+            cont++;
+        }
+
+        boolean vinoElegido = false;
+        int eleccion=0;
+        while (!vinoElegido) {
+            try {
+                eleccion = entrada.nextInt();
+                if (eleccion >= 1 && eleccion <= listaVinos.size()) {
+                    vinoElegido = true;
+                } else {
+                    System.out.println("Debe ingresar un número entre 1 y "+listaVinos.size());
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Por favor, ingrese un número válido.");
+                entrada.nextLine(); // "Limpiar" el búfer de entrada
+            }
+        }
+        eleccion--;
+        Vino vino = listaVinos.get(eleccion);
+
         if (vino.getEtapa() == 10) {
             System.out.println("No hay más etapas posibles, ya terminó la elaboración!");
         } else {
@@ -25,7 +56,7 @@ public class CambiarEtapa {
                 opcion += 1;
             }
             boolean elegida = false;
-            Scanner entrada = new Scanner(System.in);
+
             while (!elegida) {
                 int newEtapa;
                 try {
@@ -35,7 +66,7 @@ public class CambiarEtapa {
                         vino.setEtapa(newEtapa);
                         ConsultarEtapaActual consultaEtapa = new ConsultarEtapaActual();
                         System.out.println("Excelente!");
-                        consultaEtapa.consultarEtapa(vino);
+                        ConsultarEtapaActual.consultarEtapa(listaVinos);
                     } else {
                         System.out.println("Por favor, ingrese una etapa válida (opción mayor a " +vino.getEtapa() +" y hasta 10)");
                     }

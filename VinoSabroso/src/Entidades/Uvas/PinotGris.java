@@ -6,6 +6,7 @@ package Entidades.Uvas;
  */
 public class PinotGris extends Uva {
     public PinotGris(){
+        nombreUva = "Pinot Gris";
         tipoUva = "Tinta";
         aparienciaVisual = "Amarillo Oscuro";
         aroma = "Cítricos";

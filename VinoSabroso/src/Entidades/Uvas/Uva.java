@@ -7,6 +7,7 @@ package Entidades.Uvas;
  */
 
 public abstract class Uva{
+    protected String nombreUva;
     protected String tipoUva;
     protected String aparienciaVisual;
     protected String aroma;
@@ -15,9 +16,8 @@ public abstract class Uva{
     protected String sabor;
     protected String maridaje;
 
-    public String getTipoUva() {
-        return tipoUva;
-    }
+    public String getNombreUva() { return nombreUva; }
+    public String getTipoUva() {return tipoUva;}
     public String getAparienciaVisual() {
         return aparienciaVisual;
     }
@@ -41,7 +41,7 @@ public abstract class Uva{
      * Método Público sin parámetros ni return en donde imprimimos las características de la uva
      */
     public void imprimirInformacion(){
-        System.out.println("Características de la Uva");
+        System.out.println("Características de la Uva "+getNombreUva()+": ");
         System.out.println("");
         System.out.println("1-Tipo de Uva: "+getTipoUva());
         System.out.println("2-Apariencia Visual: " +getAparienciaVisual());

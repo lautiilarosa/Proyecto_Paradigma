@@ -6,6 +6,7 @@ package Entidades.Uvas;
  */
 public class Malbec extends Uva{
     public Malbec(){
+        nombreUva = "Malbec";
         tipoUva = "Tinta";
         aparienciaVisual = "Rojo Oscuro y Púrpura";
         aroma = "Frutas negras";

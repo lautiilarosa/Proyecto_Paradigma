@@ -6,6 +6,7 @@ package Entidades.Uvas;
  */
 public class SauvignonBlanc extends Uva{
     public SauvignonBlanc(){
+        nombreUva="Sauvignon Blanc";
         tipoUva = "Blanca";
         aparienciaVisual = "Tono amarillo pálido";
         aroma = "Refrescante";

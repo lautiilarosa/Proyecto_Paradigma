@@ -25,6 +25,12 @@ public class Bodega {
         this.listaVinos = listaVinos;
 
     }
+    public Bodega(){
+
+    }
+    public void añadirElemento(Uva nuevaUva) {
+        uvasIngresadas.add(nuevaUva);
+    }
 
     //Getters
 
@@ -47,6 +53,13 @@ public class Bodega {
 
     public static void agregarVino(Vino nuevoVino){
         listaVinos.add(nuevoVino);
+    }
+
+    public static void mostrarUvas(){ //Hacer mas bonito
+        System.out.println("Uvas ingresadas: ");
+        for (Uva uva :uvasIngresadas){
+            System.out.println(uva.getNombreUva()+" ");
+        }
     }
 
 }
