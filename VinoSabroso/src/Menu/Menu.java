@@ -10,12 +10,13 @@ import Entidades.Vino;
 /**
  * Clase Menu para mostrarle al usuario
  * @version 1.0, 7/9/2023
+ * @author Paula Martinez
  */
 
 public class Menu {
     public Menu(){
     }
-    public static void mostrarMenu(int mes,Bodega vinoSabroso){
+    public void mostrarMenu(int mes,Bodega vinoSabroso){
         boolean ingresoUva = false;
         Scanner scan = new Scanner(System.in);
         int cont = 1;
@@ -31,11 +32,11 @@ public class Menu {
                 System.out.println("6 - Salir");
                 try {
                     eleccion = scan.nextInt();
-                    if (eleccion >= 1 && eleccion <= 5) {
+                    if (eleccion >= 1 && eleccion <= 6) {
                         flagMenu = true;
                     } else {
                         flagMenu = false;
-                        System.out.println("Debe ingresar un número entre 1 y 5.");
+                        System.out.println("Debe ingresar un número entre 1 y 6.");
                     }
                 } catch (InputMismatchException e) {
                     System.out.println("Por favor, ingrese un número válido.");
@@ -46,9 +47,9 @@ public class Menu {
             switch (eleccion) {
                 case 1:
                     IngresarUva.ingresarUva(cont,mes,vinoSabroso);
-                    ingresoUva = true;
+                    ingresoUva = true; cont++;
                     try {
-                        Thread.sleep(5000);
+                        Thread.sleep(2000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -57,9 +58,9 @@ public class Menu {
                     if (!ingresoUva){
                         System.out.println("Por favor, primero ingrese una uva");
                     } else {
-                        ConsultarEtapaActual.consultarEtapa(vinoSabroso.getListaVinos());
+                        ConsultarEtapaActual.consultarEtapaS(vinoSabroso.getListaVinos());
                         try {
-                            Thread.sleep(5000);
+                            Thread.sleep(2000);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -71,7 +72,7 @@ public class Menu {
                     } else {
                         CambiarEtapa.cambiarDeEtapa(vinoSabroso.getListaVinos());
                         try {
-                            Thread.sleep(5000);
+                            Thread.sleep(2000);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -87,7 +88,13 @@ public class Menu {
                     }
                     break;
                 case 5:
-
+                    ConsultarTerminados.consultarEtapaT(vinoSabroso.getListaVinos());
+                    try {
+                        Thread.sleep(2000); // Pausa durante 5 segundos para que se vea mas "ordenado"
+                    } catch (InterruptedException e) {
+                        // Manejar cualquier excepción
+                        e.printStackTrace();
+                    }
                     break;
                 case 6:
                     System.out.println("Gracias por usar Vino Sabroso. ¡¡Vuelva Pronto!!");

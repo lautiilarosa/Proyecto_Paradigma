@@ -1,6 +1,8 @@
 package Menu;
 
 import Entidades.Uvas.*;
+
+import java.lang.reflect.Method;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -34,52 +36,19 @@ public class Caracteristicas {
                 scan.nextLine(); // "Limpiar" el búfer de entrada
             }
         }while(!flagTipoUva);
-        switch (tipo){ //Indicar el tipo de uva que eligió el usuario y mostrar las características de esa misma
-            case 1: Uva cabernetSauvignon = new CabernetSauvignon();
-                cabernetSauvignon.imprimirInformacion();
-                break;
-            case 2: Uva merlot = new Merlot();
-                merlot.imprimirInformacion();
-                break;
-            case 3: Uva tempranillo = new Tempranillo();
-                tempranillo.imprimirInformacion();
-                break;
-            case 4: Uva granacha = new Granacha();
-                granacha.imprimirInformacion();
-                break;
-            case 5: Uva pinotNoir = new PinotNoir();
-                pinotNoir.imprimirInformacion();
-                break;
-            case 6: Uva bonarda = new Bonarda();
-                bonarda.imprimirInformacion();
-                break;
-            case 7: Uva pinotGris = new PinotGris();
-                pinotGris.imprimirInformacion();
-                break;
-            case 8: Uva chardonnay = new Chardonnay();
-                chardonnay.imprimirInformacion();
-                break;
-            case 9: Uva sauvignonBlanc = new SauvignonBlanc();
-                sauvignonBlanc.imprimirInformacion();
-                break;
-            case 10: Uva verdejo = new Verdejo();
-                verdejo.imprimirInformacion();
-                break;
-            case 11: Uva albariño = new Albariño();
-                albariño.imprimirInformacion();
-                break;
-            case 12: Uva godello = new Godello();
-                godello.imprimirInformacion();
-                break;
-            case 13: Uva malbec = new Malbec();
-                malbec.imprimirInformacion();
-                break;
-            case 14: Uva cabernetFranc = new CabernetFranc();
-                cabernetFranc.imprimirInformacion();
-                break;
-            case 15: Uva moscatelAlejandria = new MoscatelAlejandria();
-                moscatelAlejandria.imprimirInformacion();
-                break;
+        int cont = 1;
+        for (TiposUva uva : TiposUva.values()) {
+            if (cont == tipo) {
+                Class<?> claseUva = uva.getClase(); // obtener la clase asociada.
+                try {
+                    Object nuevaUva = claseUva.getDeclaredConstructor().newInstance(); //Crea el objeto
+                    Method metodo = claseUva.getMethod("imprimirInformacion"); //Accede al método de la clase
+                    metodo.invoke(nuevaUva); //Invoca el método
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            cont++;
         }
     }
 }

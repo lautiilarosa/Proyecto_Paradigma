@@ -7,6 +7,7 @@ package Entidades.Uvas;
  */
 
 public abstract class Uva{
+    protected TiposUva enumUva;
     protected String nombreUva;
     protected String tipoUva;
     protected String aparienciaVisual;
@@ -36,6 +37,7 @@ public abstract class Uva{
     public String getMaridaje() {
         return maridaje;
     }
+    public TiposUva getEnumUva(){ return enumUva;}
 
     /**
      * Método Público sin parámetros ni return en donde imprimimos las características de la uva

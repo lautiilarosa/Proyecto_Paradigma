@@ -14,5 +14,6 @@ public class Tempranillo extends Uva{
         cuerpo = "Medio";
         sabor = "Frutas Maduras";
         maridaje = "Jamón y Cordero";
+        enumUva = TiposUva.TEMPRANILLO;
     }
 }

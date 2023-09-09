@@ -1,5 +1,6 @@
 package Menu;
 
+import java.lang.reflect.Method;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -60,7 +61,7 @@ public class IngresarUva {
         nuevoVino = new Vino(cont, nuevaUva, opcion);
         vinoSabroso.getUvasIngresadas().add(nuevaUva);
         vinoSabroso.getListaVinos().add(nuevoVino);
-        vinoSabroso.mostrarUvas();
+        vinoSabroso.mostrarVino();
 
     }
 
@@ -72,6 +73,16 @@ public class IngresarUva {
      * @return retorna finalmente el objeto de la clase correspodiente a esa uva
      */
     public static Uva elegirUva(int opcion){
+        Uva nuevaUva = null;
+        TiposUva valor = TiposUva.values()[opcion-1];
+        Class<?> claseUva = valor.getClase(); // obtener la clase asociada.
+        try {
+            nuevaUva = (Uva) claseUva.getDeclaredConstructor().newInstance(); //Crea el objeto
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return nuevaUva;
+        /*
         switch (opcion){
             case 1:
                 Uva nuevaUvaC = new CabernetSauvignon();
@@ -123,6 +134,8 @@ public class IngresarUva {
                 return nuevaUvaAA;
 
         }
+
+         */
     }
 
 }

@@ -55,10 +55,10 @@ public class Bodega {
         listaVinos.add(nuevoVino);
     }
 
-    public static void mostrarUvas(){ //Hacer mas bonito
-        System.out.println("Uvas ingresadas: ");
-        for (Uva uva :uvasIngresadas){
-            System.out.println(uva.getNombreUva()+" ");
+    public static void mostrarVino(){ //Hacer mas bonito
+        System.out.println("Vinos ingresados: ");
+        for (Vino vino :listaVinos){
+            System.out.println("id: "+vino.getId()+" , nombre: "+vino.uva.getNombreUva());
         }
     }
 

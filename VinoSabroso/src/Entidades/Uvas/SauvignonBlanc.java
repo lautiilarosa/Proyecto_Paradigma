@@ -14,5 +14,6 @@ public class SauvignonBlanc extends Uva{
         cuerpo = "Ligero a medio";
         sabor = "Notas herbales y vegetales";
         maridaje = "Mariscos y pescados";
+        enumUva = TiposUva.SAUVIGNONG_BLANC;
     }
 }

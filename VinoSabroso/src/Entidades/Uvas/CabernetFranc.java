@@ -14,5 +14,6 @@ public class CabernetFranc extends Uva{
         cuerpo = "Medio-Alto";
         sabor = "Frutos rojos";
         maridaje = "Carnes Rojas y aves";
+        enumUva = TiposUva.CABERNET_FRANC;
     }
 }

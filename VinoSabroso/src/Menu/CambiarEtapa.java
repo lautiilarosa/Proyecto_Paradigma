@@ -5,11 +5,12 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import Entidades.Vino;
+import Interfaces.IConsultarEtapaActual;
 import Menu.ConsultarEtapaActual;
 
 import static Menu.ConsultarEtapaActual.consultarEtapaActual;
 
-public class CambiarEtapa {
+public class CambiarEtapa implements IConsultarEtapaActual {
     //Contructor
     public static void cambiarEtapa(){}
 
@@ -64,9 +65,10 @@ public class CambiarEtapa {
                     if (newEtapa > vino.getEtapa() && newEtapa <= 10) {
                         elegida = true;
                         vino.setEtapa(newEtapa);
-                        ConsultarEtapaActual consultaEtapa = new ConsultarEtapaActual();
+                        //ConsultarEtapaActual consultaEtapa = new ConsultarEtapaActual();
                         System.out.println("Excelente!");
-                        ConsultarEtapaActual.consultarEtapa(listaVinos);
+                        consultarEtapaA(listaVinos,vino);
+                        //ConsultarEtapaActual.consultarEtapa(listaVinos);
                     } else {
                         System.out.println("Por favor, ingrese una etapa válida (opción mayor a " +vino.getEtapa() +" y hasta 10)");
                     }
@@ -77,6 +79,19 @@ public class CambiarEtapa {
             }
         }
     }
-    //Consultar nombre etapa:
-    // /////EtapasEnum etapa = EtapasEnum.values()[2];
+
+    @Override
+    public void consultarEtapa(ArrayList<Vino> listaVinos,Vino vino) {
+        IConsultarEtapaActual.super.consultarEtapa(listaVinos,vino);
+        EtapasEnum etapa = EtapasEnum.values()[vino.getEtapa()-1];
+        System.out.println("Etapa actual de elaboración del vino " +vino.uva.getNombreUva() +" de id "+vino.getId()+" es: " +etapa);
+
+    }
+
+    public static void consultarEtapaA(ArrayList<Vino> listaVinos, Vino vino) {
+        CambiarEtapa consultador = new CambiarEtapa();
+        consultador.consultarEtapa(listaVinos, vino);
+    }
+
+
 }

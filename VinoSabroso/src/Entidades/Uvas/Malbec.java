@@ -14,5 +14,6 @@ public class Malbec extends Uva{
         cuerpo = "Medio-Completo";
         sabor = "Frutas negras";
         maridaje = "Carnes rojas a la parilla";
+        enumUva = TiposUva.MALBEC;
     }
 }

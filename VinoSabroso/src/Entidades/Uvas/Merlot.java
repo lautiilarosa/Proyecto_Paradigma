@@ -14,5 +14,6 @@ public class Merlot extends Uva{
         cuerpo = "Medio";
         sabor = "Suave y Frutal";
         maridaje = "Pollo,cerdo";
+        enumUva = TiposUva.MERLOT;
     }
 }

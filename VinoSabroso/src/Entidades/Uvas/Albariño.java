@@ -14,5 +14,6 @@ public class Albariño extends Uva{
         cuerpo = "Ligero a medio";
         sabor = "Cítricos y frutales";
         maridaje = "Frutas del mar y carnes blancas";
+        enumUva = TiposUva.ALBARIÑO;
     }
 }

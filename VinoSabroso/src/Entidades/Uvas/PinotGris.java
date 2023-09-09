@@ -14,5 +14,6 @@ public class PinotGris extends Uva {
         cuerpo = "Medio a pleno";
         sabor = "Mezcla de frutas tropicales";
         maridaje = "Carnes blancas y comida asiática";
+        enumUva = TiposUva.PINOT_GRIS;
     }
 }

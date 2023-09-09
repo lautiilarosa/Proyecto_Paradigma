@@ -1,5 +1,5 @@
 package Entidades.Uvas;
-
+import Entidades.Uvas.*;
 import Entidades.EtapasEnum;
 
 /**
@@ -9,28 +9,49 @@ import Entidades.EtapasEnum;
  */
 
 public enum TiposUva {
-    CABERNET_SAUVIGNON,
-    MERLOT,
-    TEMPRANILLO,
-    GRANACHA,
-    PINOT_NOIR,
-    BONARDA,
-    PINOT_GRIS,
-    CHARDONNAY,
-    SAUVIGNONG_BLANC,
-    VERDEJO,
-    ALBARIÑO,
-    GODELLO,
-    MALBEC ,
-    CABERNET_FRANC,
-    MOSCATEL_ALEJANDRIA;
+    CABERNET_SAUVIGNON(CabernetSauvignon.class),
+    MERLOT(Merlot.class),
+    TEMPRANILLO(Tempranillo.class),
+    GRANACHA(Granacha.class),
+    PINOT_NOIR(PinotNoir.class),
+    BONARDA(Bonarda.class),
+    PINOT_GRIS(PinotGris.class),
+    CHARDONNAY(Chardonnay.class),
+    SAUVIGNONG_BLANC(SauvignonBlanc.class),
+    VERDEJO(Verdejo.class),
+    ALBARIÑO(Albariño.class),
+    GODELLO(Godello.class),
+    MALBEC(Malbec.class) ,
+    CABERNET_FRANC(CabernetFranc.class),
+    MOSCATEL_ALEJANDRIA(MoscatelAlejandria.class);
 
+    private Class<?> clase;
+
+
+    /**
+     * método que muestra todas las uvas en una lista ordenada
+     */
     public static void imprimirTipoUva(){
         int cont = 1;
         for (TiposUva tipo : TiposUva.values()){
             System.out.println(cont+": "+tipo);
-            cont += 1;
+            cont++;
         }
         System.out.println("");
+    }
+
+    /**
+     *
+     * @param clase la clase que se asigna como característica al valor del enum
+     */
+    TiposUva(Class<?> clase){
+        this.clase = clase;
+    }
+
+    /**
+     * @return clase que quiero obtener
+     */
+    public Class<?> getClase() {
+        return clase;
     }
 }
