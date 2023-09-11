@@ -6,7 +6,7 @@ package Entidades.Uvas;
  */
 public class MoscatelAlejandria extends Uva{
     public MoscatelAlejandria(){
-        enumUva = TiposUva.MOSCATEL_ALEJANDRIA;
+        enumUva = TiposUva.MoscatelAlejandria;
         nombreUva = "Moscatel Alejandría";
         tipoUva = "Blanca";
         aparienciaVisual = "Color Dorado";

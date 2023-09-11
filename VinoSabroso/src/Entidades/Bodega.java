@@ -8,19 +8,16 @@ import Entidades.Vino;
  * @author Paulina Suden
  */
 public class Bodega {
-    public static ArrayList<Uva> uvasIngresadas;
     public static ArrayList<Vino> listaVinos;
     private int mesIngresado;
 
     /**
-     * @param uvasIngresadas guarda un ArrayList con las características de todas las uvas ingresadas
      * @param mesIngresado guarda el mes que ingresó el usuario
      * @param listaVinos guarda todos los objetos Vinos ingresados por el usuario
      */
 
     //Constructor
-    public Bodega(ArrayList<Uva> uvasIngresadas, int mesIngresado, ArrayList<Vino> listaVinos) {
-        this.uvasIngresadas = uvasIngresadas;
+    public Bodega(int mesIngresado, ArrayList<Vino> listaVinos) {
         this.mesIngresado = mesIngresado;
         this.listaVinos = listaVinos;
 
@@ -28,13 +25,9 @@ public class Bodega {
     public Bodega(){
 
     }
-    public void añadirElemento(Uva nuevaUva) {
-        uvasIngresadas.add(nuevaUva);
-    }
 
     //Getters
 
-    public ArrayList<Uva> getUvasIngresadas() {return uvasIngresadas;}
 
     public ArrayList<Vino> getListaVinos(){return listaVinos;}
 
@@ -47,18 +40,21 @@ public class Bodega {
         this.mesIngresado = mesIngresado;
     }
 
-    public static void agregarUva (Uva nuevaUva){
-        uvasIngresadas.add(nuevaUva);
-    }
 
     public static void agregarVino(Vino nuevoVino){
         listaVinos.add(nuevoVino);
     }
 
+
+    /**
+     * El método mostrarVino() nos muestra por pantalla todos los vinos ingresados
+     * Con el id y el nombre de la uva del respectivo vino
+     * @version 1.0 , 11/09/2023
+     */
     public static void mostrarVino(){ //Hacer mas bonito
         System.out.println("Vinos ingresados: ");
         for (Vino vino :listaVinos){
-            System.out.println("id: "+vino.getId()+" , nombre: "+vino.uva.getNombreUva());
+            System.out.println("Id: "+vino.getId()+" ,nombre: "+vino.uva.getNombreUva());
         }
     }
 

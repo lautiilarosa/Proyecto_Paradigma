@@ -14,6 +14,6 @@ public class Godello extends Uva {
         cuerpo = "Medio-Alto";
         sabor = "Frutas blancas y amarillas";
         maridaje = "Pescados Blancos y quesos suaves";
-        enumUva = TiposUva.GODELLO;
+        enumUva = TiposUva.Godello;
     }
 }

@@ -14,6 +14,6 @@ public class Verdejo extends Uva{
         cuerpo = "Ligero a medio";
         sabor = "Frutos secos y miel";
         maridaje = "Pollo ligero y Mariscos";
-        enumUva = TiposUva.VERDEJO;
+        enumUva = TiposUva.Verdejo;
     }
 }

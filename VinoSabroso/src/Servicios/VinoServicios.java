@@ -9,7 +9,7 @@ public class VinoServicios {
     /**
      * @return devuelve True o False dependiendo si se ha llegado a la última etapa
      */
-    public boolean terminado(Vino id) { return id.getEtapa() == 9; }
+
     public void actualizarEtapa(Vino etapa, int newEtapa) {
         etapa.setEtapa(newEtapa);
     }

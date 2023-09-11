@@ -14,6 +14,6 @@ public class Granacha extends Uva{
         cuerpo = "Medio";
         sabor = "Bayas y especias";
         maridaje = "Carnes a la parilla y embutidos";
-        enumUva = TiposUva.GRANACHA;
+        enumUva = TiposUva.Granacha;
     }
 }

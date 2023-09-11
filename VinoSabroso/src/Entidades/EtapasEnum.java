@@ -17,6 +17,10 @@ public enum EtapasEnum {
     Crianza,
     Embotellamiento;
 
+    /**
+     * Método imprimir etapas que imprime por pantalla las etapas de la elaboración del vino
+     * @version 1.0 , 11/09/2023
+     */
     public static void imprimirEtapas(){
         int cont = 1;
         for (EtapasEnum etapa : EtapasEnum.values()){

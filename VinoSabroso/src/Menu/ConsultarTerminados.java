@@ -1,11 +1,11 @@
 package Menu;
 
-import Entidades.EtapasEnum;
 import Entidades.Vino;
+import Interfaces.IConsultarEtapaActual;
 
 import java.util.ArrayList;
 
-public class ConsultarTerminados {
+public class ConsultarTerminados implements IConsultarEtapaActual {
 
     public static void consultarEtapaT(ArrayList<Vino> listaVinos) {
         ConsultarTerminados obj = new ConsultarTerminados();

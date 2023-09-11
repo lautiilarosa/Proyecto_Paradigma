@@ -9,21 +9,21 @@ import Entidades.EtapasEnum;
  */
 
 public enum TiposUva {
-    CABERNET_SAUVIGNON(CabernetSauvignon.class),
-    MERLOT(Merlot.class),
-    TEMPRANILLO(Tempranillo.class),
-    GRANACHA(Granacha.class),
-    PINOT_NOIR(PinotNoir.class),
-    BONARDA(Bonarda.class),
-    PINOT_GRIS(PinotGris.class),
-    CHARDONNAY(Chardonnay.class),
-    SAUVIGNONG_BLANC(SauvignonBlanc.class),
-    VERDEJO(Verdejo.class),
-    ALBARIÑO(Albariño.class),
-    GODELLO(Godello.class),
-    MALBEC(Malbec.class) ,
-    CABERNET_FRANC(CabernetFranc.class),
-    MOSCATEL_ALEJANDRIA(MoscatelAlejandria.class);
+    CabernetSauvignon(CabernetSauvignon.class),
+    Merlot(Merlot.class),
+    Tempranillo(Tempranillo.class),
+    Granacha(Granacha.class),
+    PinotNoir(PinotNoir.class),
+    Bonarda(Bonarda.class),
+    PinotGris(PinotGris.class),
+    Chardonnay(Chardonnay.class),
+    SauvignonBlanc(SauvignonBlanc.class),
+    Verdejo(Verdejo.class),
+    Albariño(Albariño.class),
+    Godello(Godello.class),
+    Malbec(Malbec.class) ,
+    CabernetFranc(CabernetFranc.class),
+    MoscatelAlejandria(MoscatelAlejandria.class);
 
     private Class<?> clase;
 

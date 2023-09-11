@@ -14,6 +14,6 @@ public class Bonarda extends Uva{
         cuerpo = "Medio";
         sabor = "Suave";
         maridaje = "Quesos Duros";
-        enumUva = TiposUva.BONARDA;
+        enumUva = TiposUva.Bonarda;
     }
 }

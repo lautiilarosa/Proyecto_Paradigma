@@ -33,9 +33,9 @@ public class Main {
         } while (!flagMes);
         // ---------- Menú ----------
         Menu menu = new Menu();
-        ArrayList<Uva> listaUva = new ArrayList<Uva>();
+        //ArrayList<Uva> listaUva = new ArrayList<Uva>();
         ArrayList<Vino> listaVino = new ArrayList<Vino>();
-        Bodega vinoSabroso = new Bodega(listaUva, mes, listaVino);
+        Bodega vinoSabroso = new Bodega(mes, listaVino);
         menu.mostrarMenu(mes, vinoSabroso);
     }
 }

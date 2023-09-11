@@ -14,6 +14,6 @@ public class PinotNoir extends Uva{
         cuerpo = "Ligero";
         sabor = "Delicado y Frutal";
         maridaje = "Aves y pescado";
-        enumUva = TiposUva.PINOT_NOIR;
+        enumUva = TiposUva.PinotNoir;
     }
 }

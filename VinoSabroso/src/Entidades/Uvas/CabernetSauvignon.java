@@ -14,7 +14,7 @@ public class CabernetSauvignon extends Uva {
         cuerpo = "Completo";
         sabor = "Frutas Oscuras";
         maridaje = "Carnes Rojas Asadas";
-        enumUva = TiposUva.CABERNET_SAUVIGNON;
+        enumUva = TiposUva.CabernetSauvignon;
     }
 
 }

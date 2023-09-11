@@ -1,14 +1,13 @@
 package Entidades;
 import Entidades.Uvas.Uva;
 
-import java.time.LocalDate;
 /**
  * Clase Vino guarda los detalles de cada vino
  * @version 1.0, 7/9/2023
  * @author Paulina Suden
  */
 public class Vino {
-    private int id;
+    private final int id;
 
     public Uva uva;
     private int etapa;
@@ -39,7 +38,5 @@ public class Vino {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    //public void setId(int id) {this.id = id;}
 }

@@ -7,15 +7,15 @@ package Entidades.Uvas;
  */
 
 public abstract class Uva{
-    protected TiposUva enumUva;
-    protected String nombreUva;
-    protected String tipoUva;
-    protected String aparienciaVisual;
-    protected String aroma;
-    protected String intensidad;
-    protected String cuerpo;
-    protected String sabor;
-    protected String maridaje;
+    protected static TiposUva enumUva;
+    protected static String nombreUva;
+    protected static String tipoUva;
+    protected static String aparienciaVisual;
+    protected static String aroma;
+    protected static String intensidad;
+    protected static String cuerpo;
+    protected static String sabor;
+    protected static String maridaje;
 
     public String getNombreUva() { return nombreUva; }
     public String getTipoUva() {return tipoUva;}

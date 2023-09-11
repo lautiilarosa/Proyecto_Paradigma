@@ -14,6 +14,6 @@ public class Chardonnay extends Uva {
         cuerpo = "Ligero y fresco";
         sabor = "Frutas blancas y tropicales";
         maridaje = "Platos de mariscos";
-        enumUva = TiposUva.CHARDONNAY;
+        enumUva = TiposUva.Chardonnay;
     }
 }

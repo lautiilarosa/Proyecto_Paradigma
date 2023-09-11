@@ -59,7 +59,6 @@ public class IngresarUva {
         }
 
         nuevoVino = new Vino(cont, nuevaUva, opcion);
-        vinoSabroso.getUvasIngresadas().add(nuevaUva);
         vinoSabroso.getListaVinos().add(nuevoVino);
         vinoSabroso.mostrarVino();
 

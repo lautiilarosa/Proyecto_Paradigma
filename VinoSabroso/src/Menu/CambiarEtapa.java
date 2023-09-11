@@ -6,9 +6,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import Entidades.Vino;
 import Interfaces.IConsultarEtapaActual;
-import Menu.ConsultarEtapaActual;
 
-import static Menu.ConsultarEtapaActual.consultarEtapaActual;
+
 
 public class CambiarEtapa implements IConsultarEtapaActual {
     //Contructor

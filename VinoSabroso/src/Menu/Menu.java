@@ -1,15 +1,12 @@
 package Menu;
-import Entidades.Uvas.Uva;
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 import Entidades.Bodega;
-import Entidades.Vino;
 
 
 /**
  * Clase Menu para mostrarle al usuario
- * @version 1.0, 7/9/2023
+ * @version 1.1, 7/9/2023
  * @author Paula Martinez
  */
 
@@ -49,8 +46,9 @@ public class Menu {
                     IngresarUva.ingresarUva(cont,mes,vinoSabroso);
                     ingresoUva = true; cont++;
                     try {
-                        Thread.sleep(2000);
+                        Thread.sleep(2000); // Pausa durante 2 segundos
                     } catch (InterruptedException e) {
+                        // Manejar cualquier excepción
                         e.printStackTrace();
                     }
                     break;
@@ -60,8 +58,9 @@ public class Menu {
                     } else {
                         ConsultarEtapaActual.consultarEtapaS(vinoSabroso.getListaVinos());
                         try {
-                            Thread.sleep(2000);
+                            Thread.sleep(2000); // Pausa durante 5 segundos
                         } catch (InterruptedException e) {
+                            // Manejar cualquier excepción
                             e.printStackTrace();
                         }
                     }
@@ -72,8 +71,9 @@ public class Menu {
                     } else {
                         CambiarEtapa.cambiarDeEtapa(vinoSabroso.getListaVinos());
                         try {
-                            Thread.sleep(2000);
+                            Thread.sleep(2000); // Pausa durante 2 segundos
                         } catch (InterruptedException e) {
+                            // Manejar cualquier excepción
                             e.printStackTrace();
                         }
                     }
@@ -90,7 +90,7 @@ public class Menu {
                 case 5:
                     ConsultarTerminados.consultarEtapaT(vinoSabroso.getListaVinos());
                     try {
-                        Thread.sleep(2000); // Pausa durante 5 segundos para que se vea mas "ordenado"
+                        Thread.sleep(2000); // Pausa durante 2 segundos
                     } catch (InterruptedException e) {
                         // Manejar cualquier excepción
                         e.printStackTrace();
