@@ -13,6 +13,11 @@ import Entidades.Bodega;
 public class Menu {
     public Menu(){
     }
+
+    /**
+     * @param mes mes que desea el usuario
+     * @param vinoSabroso bodega actual
+     */
     public void mostrarMenu(int mes,Bodega vinoSabroso){
         boolean ingresoUva = false;
         Scanner scan = new Scanner(System.in);

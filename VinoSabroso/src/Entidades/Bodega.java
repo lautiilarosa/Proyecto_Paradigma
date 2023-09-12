@@ -22,12 +22,15 @@ public class Bodega {
         this.listaVinos = listaVinos;
 
     }
+
+    /**
+     * Constructor vacío
+     */
     public Bodega(){
 
     }
 
     //Getters
-
 
     public ArrayList<Vino> getListaVinos(){return listaVinos;}
 

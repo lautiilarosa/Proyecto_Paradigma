@@ -8,7 +8,10 @@ import Entidades.Vino;
 import Interfaces.IConsultarEtapaActual;
 
 
-
+/**
+ * Clase para cambiar la etapa de elaboración de un vino
+ * @version 1.0, 7/9/2023
+ */
 public class CambiarEtapa implements IConsultarEtapaActual {
     //Contructor
     public static void cambiarEtapa(){}
@@ -79,6 +82,11 @@ public class CambiarEtapa implements IConsultarEtapaActual {
         }
     }
 
+    /**
+     * Implementación del metodo consultarEtapa para mostrar el atributo estado de un objeto vino
+     * @param listaVinos lista de todos los objetos vinos ingresados por el usuario
+     * @param vino objeto vino al que se le va a consultar el estado
+     */
     @Override
     public void consultarEtapa(ArrayList<Vino> listaVinos,Vino vino) {
         IConsultarEtapaActual.super.consultarEtapa(listaVinos,vino);

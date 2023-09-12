@@ -17,6 +17,9 @@ public class CabernetFranc extends Uva{
         enumUva = TiposUva.CabernetFranc;
     }
 
+    /**
+     * Implementación del método abstracto imprimirInformacion
+     */
     @Override
     public void imprimirInformacion() {
         System.out.println("La uva "+nombreUva+" tiene las siguientes características:");

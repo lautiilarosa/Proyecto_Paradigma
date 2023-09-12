@@ -23,7 +23,6 @@ public class IngresarUva {
     }
 
     public static void ingresarUva(int cont, int mes, Bodega vinoSabroso) {
-        //Uva nuevaUva;
         Vino nuevoVino;
         Scanner scan = new Scanner(System.in);
 

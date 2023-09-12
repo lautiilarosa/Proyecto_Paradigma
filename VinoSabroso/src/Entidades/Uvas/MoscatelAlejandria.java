@@ -17,6 +17,9 @@ public class MoscatelAlejandria extends Uva{
         maridaje = "Frutas Frescas y secas";
     }
 
+    /**
+     * Implementación del método abstracto imprimirInformacion
+     */
     @Override
     public void imprimirInformacion() {
         System.out.println("La uva "+nombreUva+" tiene las siguientes características:");

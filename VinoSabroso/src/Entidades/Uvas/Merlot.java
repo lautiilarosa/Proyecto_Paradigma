@@ -17,6 +17,9 @@ public class Merlot extends Uva{
         enumUva = TiposUva.Merlot;
     }
 
+    /**
+     * Implementación del método abstracto imprimirInformacion
+     */
     @Override
     public void imprimirInformacion() {
         System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
