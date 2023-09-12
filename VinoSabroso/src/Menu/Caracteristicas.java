@@ -41,6 +41,11 @@ public class Caracteristicas {
             if (cont == tipo) {
                 Class<?> claseUva = uva.getClase(); // obtener la clase asociada.
                 try {
+                    //Utilizamos reflexion, que permite crear objetos de cualquier clase en tiempo de ejecución,
+                    //y al declarar la variable como Object, se puede referir a objetos de diferentes clases
+                    //sin conocer el tipo exacto de antemano.
+                    //getDeclaredConstructor() obtiene el constructor de la clase especificada
+                    //newInstance(): se crea una nueva instancia de la clase
                     Object nuevaUva = claseUva.getDeclaredConstructor().newInstance(); //Crea el objeto
                     Method metodo = claseUva.getMethod("imprimirInformacion"); //Accede al método de la clase
                     metodo.invoke(nuevaUva); //Invoca el método
