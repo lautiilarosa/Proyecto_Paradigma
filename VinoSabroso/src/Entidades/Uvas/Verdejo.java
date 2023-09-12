@@ -16,4 +16,11 @@ public class Verdejo extends Uva{
         maridaje = "Pollo ligero y Mariscos";
         enumUva = TiposUva.Verdejo;
     }
+
+    @Override
+    public void imprimirInformacion() {
+        System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
+        System.out.println("");
+        super.imprimirInformacion();
+    }
 }

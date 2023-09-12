@@ -16,4 +16,11 @@ public class SauvignonBlanc extends Uva{
         maridaje = "Mariscos y pescados";
         enumUva = TiposUva.SauvignonBlanc;
     }
+
+    @Override
+    public void imprimirInformacion() {
+        System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
+        System.out.println("");
+        super.imprimirInformacion();
+    }
 }

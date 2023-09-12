@@ -16,4 +16,11 @@ public class Chardonnay extends Uva {
         maridaje = "Platos de mariscos";
         enumUva = TiposUva.Chardonnay;
     }
+
+    @Override
+    public void imprimirInformacion() {
+        System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
+        System.out.println("");
+        super.imprimirInformacion();
+    }
 }

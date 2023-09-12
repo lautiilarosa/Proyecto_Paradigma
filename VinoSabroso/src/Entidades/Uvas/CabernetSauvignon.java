@@ -17,4 +17,10 @@ public class CabernetSauvignon extends Uva {
         enumUva = TiposUva.CabernetSauvignon;
     }
 
+    @Override
+    public void imprimirInformacion() {
+        System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
+        System.out.println("");
+        super.imprimirInformacion();
+    }
 }

@@ -16,4 +16,11 @@ public class Malbec extends Uva{
         maridaje = "Carnes rojas a la parilla";
         enumUva = TiposUva.Malbec;
     }
+
+    @Override
+    public void imprimirInformacion() {
+        System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
+        System.out.println("");
+        super.imprimirInformacion();
+    }
 }

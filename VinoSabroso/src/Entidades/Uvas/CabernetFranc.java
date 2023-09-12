@@ -16,4 +16,11 @@ public class CabernetFranc extends Uva{
         maridaje = "Carnes Rojas y aves";
         enumUva = TiposUva.CabernetFranc;
     }
+
+    @Override
+    public void imprimirInformacion() {
+        System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
+        System.out.println("");
+        super.imprimirInformacion();
+    }
 }

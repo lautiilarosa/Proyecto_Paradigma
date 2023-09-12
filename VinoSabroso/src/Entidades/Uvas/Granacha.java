@@ -16,4 +16,11 @@ public class Granacha extends Uva{
         maridaje = "Carnes a la parilla y embutidos";
         enumUva = TiposUva.Granacha;
     }
+
+    @Override
+    public void imprimirInformacion() {
+        System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
+        System.out.println("");
+        super.imprimirInformacion();
+    }
 }

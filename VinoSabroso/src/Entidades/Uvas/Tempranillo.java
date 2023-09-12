@@ -16,4 +16,11 @@ public class Tempranillo extends Uva{
         maridaje = "Jamón y Cordero";
         enumUva = TiposUva.Tempranillo;
     }
+
+    @Override
+    public void imprimirInformacion() {
+        System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
+        System.out.println("");
+        super.imprimirInformacion();
+    }
 }

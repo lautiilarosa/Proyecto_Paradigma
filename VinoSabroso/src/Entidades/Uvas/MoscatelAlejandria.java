@@ -16,4 +16,11 @@ public class MoscatelAlejandria extends Uva{
         sabor = "Canela o vainilla";
         maridaje = "Frutas Frescas y secas";
     }
+
+    @Override
+    public void imprimirInformacion() {
+        System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
+        System.out.println("");
+        super.imprimirInformacion();
+    }
 }

@@ -16,4 +16,11 @@ public class Albariño extends Uva{
         maridaje = "Frutas del mar y carnes blancas";
         enumUva = TiposUva.Albariño;
     }
+
+    @Override
+    public void imprimirInformacion() {
+        System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
+        System.out.println("");
+        super.imprimirInformacion();
+    }
 }

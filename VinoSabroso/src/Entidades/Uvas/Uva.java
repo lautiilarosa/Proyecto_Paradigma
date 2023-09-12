@@ -17,7 +17,9 @@ public abstract class Uva{
     protected static String sabor;
     protected static String maridaje;
 
-    public String getNombreUva() { return nombreUva; }
+    public static String getNombreUva() {
+        return nombreUva;
+    }
     public String getTipoUva() {return tipoUva;}
     public String getAparienciaVisual() {
         return aparienciaVisual;
@@ -43,8 +45,6 @@ public abstract class Uva{
      * Método Público sin parámetros ni return en donde imprimimos las características de la uva
      */
     public void imprimirInformacion(){
-        System.out.println("Características de la Uva "+getNombreUva()+": ");
-        System.out.println("");
         System.out.println("1-Tipo de Uva: "+getTipoUva());
         System.out.println("2-Apariencia Visual: " +getAparienciaVisual());
         System.out.println("3-Aroma: "+getAroma());

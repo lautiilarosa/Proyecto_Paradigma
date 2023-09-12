@@ -16,4 +16,11 @@ public class Bonarda extends Uva{
         maridaje = "Quesos Duros";
         enumUva = TiposUva.Bonarda;
     }
+
+    @Override
+    public void imprimirInformacion() {
+        System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
+        System.out.println("");
+        super.imprimirInformacion();
+    }
 }

@@ -16,4 +16,11 @@ public class PinotNoir extends Uva{
         maridaje = "Aves y pescado";
         enumUva = TiposUva.PinotNoir;
     }
+
+    @Override
+    public void imprimirInformacion() {
+        System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
+        System.out.println("");
+        super.imprimirInformacion();
+    }
 }

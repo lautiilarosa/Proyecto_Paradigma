@@ -16,4 +16,11 @@ public class Godello extends Uva {
         maridaje = "Pescados Blancos y quesos suaves";
         enumUva = TiposUva.Godello;
     }
+
+    @Override
+    public void imprimirInformacion() {
+        System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
+        System.out.println("");
+        super.imprimirInformacion();
+    }
 }

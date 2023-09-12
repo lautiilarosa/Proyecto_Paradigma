@@ -16,4 +16,11 @@ public class Merlot extends Uva{
         maridaje = "Pollo,cerdo";
         enumUva = TiposUva.Merlot;
     }
+
+    @Override
+    public void imprimirInformacion() {
+        System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
+        System.out.println("");
+        super.imprimirInformacion();
+    }
 }

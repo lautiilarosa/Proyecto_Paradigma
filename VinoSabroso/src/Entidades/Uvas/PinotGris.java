@@ -16,4 +16,11 @@ public class PinotGris extends Uva {
         maridaje = "Carnes blancas y comida asiática";
         enumUva = TiposUva.PinotGris;
     }
+
+    @Override
+    public void imprimirInformacion() {
+        System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
+        System.out.println("");
+        super.imprimirInformacion();
+    }
 }
