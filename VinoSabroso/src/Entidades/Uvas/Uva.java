@@ -44,7 +44,7 @@ public abstract class Uva{
     /**
      * Método Público sin parámetros ni return en donde imprimimos las características de la uva
      */
-    public static void imprimirInformacion(){
+    public void imprimirInformacion(){
         System.out.println("1-Tipo de Uva: "+getTipoUva());
         System.out.println("2-Apariencia Visual: " +getAparienciaVisual());
         System.out.println("3-Aroma: "+getAroma());
