@@ -10,16 +10,15 @@ public enum EtapasEnum {
     Cosecha,
     Traslado,
     Despalillado,
-    TrasladoDepósito,
-    PrimeraFermentación,
-    SegundaFermentación,
+    TrasladoDeposito,
+    PrimeraFermentacion,
+    SegundaFermentacion,
     Limpieza,
     Crianza,
     Embotellamiento;
 
     /**
      * Método imprimir etapas que imprime por pantalla las etapas de la elaboración del vino
-     * @version 1.0 , 11/09/2023
      */
     public static void imprimirEtapas(){
         int cont = 1;
@@ -27,6 +26,6 @@ public enum EtapasEnum {
             System.out.println(cont+": "+etapa);
             cont += 1;
         }
-        System.out.println("");
+        System.out.println(" ");
     }
 }

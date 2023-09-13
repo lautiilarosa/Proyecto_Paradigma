@@ -15,4 +15,6 @@ public interface IConsultarEtapaActual {
      */
     default void consultarEtapa(ArrayList<Vino> listaVinos,Vino vino){
     }
+    default void consultarEtapa(ArrayList<Vino> listaVinos){
+    }
 }

@@ -4,8 +4,8 @@ package Entidades.Uvas;
  * @version 1.0 , 07/09/2023
  * @author Lautaro Larosa
  */
-public class Albariño extends Uva{
-    public Albariño(){
+public class Albarinio extends Uva{
+    public Albarinio(){
         nombreUva = "Albariño";
         tipoUva = "Blanca";
         aparienciaVisual = "Amarillo Pálido";
@@ -14,14 +14,14 @@ public class Albariño extends Uva{
         cuerpo = "Ligero a medio";
         sabor = "Cítricos y frutales";
         maridaje = "Frutas del mar y carnes blancas";
-        enumUva = TiposUva.Albariño;
+        enumUva = TiposUva.Albarinio;
     }
 
     /**
      * Implementación del método abstracto imprimirInformacion
      */
     @Override
-    public void imprimirInformacion() {
+    public static void imprimirInformacion() {
         System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
         System.out.println("");
         super.imprimirInformacion();

@@ -20,31 +20,31 @@ public abstract class Uva{
     public static String getNombreUva() {
         return nombreUva;
     }
-    public String getTipoUva() {return tipoUva;}
-    public String getAparienciaVisual() {
+    public static String getTipoUva() {return tipoUva;}
+    public static String getAparienciaVisual() {
         return aparienciaVisual;
     }
-    public String getAroma() {
+    public static String getAroma() {
         return aroma;
     }
-    public String getIntensidad() {
+    public static String getIntensidad() {
         return intensidad;
     }
-    public String getCuerpo() {
+    public static String getCuerpo() {
         return cuerpo;
     }
-    public String getSabor() {
+    public static String getSabor() {
         return sabor;
     }
-    public String getMaridaje() {
+    public static String getMaridaje() {
         return maridaje;
     }
-    public TiposUva getEnumUva(){ return enumUva;}
+    public static TiposUva getEnumUva(){ return enumUva;}
 
     /**
      * Método Público sin parámetros ni return en donde imprimimos las características de la uva
      */
-    public void imprimirInformacion(){
+    public static void imprimirInformacion(){
         System.out.println("1-Tipo de Uva: "+getTipoUva());
         System.out.println("2-Apariencia Visual: " +getAparienciaVisual());
         System.out.println("3-Aroma: "+getAroma());

@@ -10,17 +10,17 @@ import java.util.ArrayList;
  * @version 1.0, 9/9/2023
  */
 public class ConsultarTerminados implements IConsultarEtapaActual {
-
+    /**
+     * Implementación del método consultarEtapa para mostrar el atributo estado de un objeto vino
+     * En este caso se consulta ese atributo para todos los vinos
+     * @see Vino
+     * @param listaVinos : lista de todos los objetos vinos ingresados por el usuario
+     */
     public static void consultarEtapaT(ArrayList<Vino> listaVinos) {
         ConsultarTerminados obj = new ConsultarTerminados();
         obj.consultarEtapa(listaVinos); // Llamada de instancia desde el objeto
     }
-
-    /**
-     * Implementación del método consultarEtapa para mostrar el atributo estado de un objeto vino
-     * En este caso se consulta ese atributo para todos los vinos
-     * @param listaVinos : lista de todos los objetos vinos ingresados por el usuario
-     */
+    @Override
     public void consultarEtapa(ArrayList<Vino> listaVinos){
         boolean terminados=false;
         for (Vino vino : listaVinos){

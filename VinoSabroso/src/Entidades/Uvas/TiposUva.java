@@ -1,6 +1,4 @@
 package Entidades.Uvas;
-import Entidades.Uvas.*;
-import Entidades.EtapasEnum;
 
 /**
  * Enumeración TiposUva en donde representa los 15 tipos de uva que puede seleccionar el usuario
@@ -19,7 +17,7 @@ public enum TiposUva {
     Chardonnay(Chardonnay.class),
     SauvignonBlanc(SauvignonBlanc.class),
     Verdejo(Verdejo.class),
-    Albariño(Albariño.class),
+    Albarinio(Albarinio.class),
     Godello(Godello.class),
     Malbec(Malbec.class) ,
     CabernetFranc(CabernetFranc.class),

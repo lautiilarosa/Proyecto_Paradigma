@@ -6,9 +6,7 @@ import Entidades.Vino;
  * @author Paulina Suden
  */
 public class VinoServicios {
-    /**
-     * @return devuelve True o False dependiendo si se ha llegado a la última etapa
-     */
+
 
     public void actualizarEtapa(Vino etapa, int newEtapa) {
         etapa.setEtapa(newEtapa);

@@ -20,6 +20,7 @@ public class CambiarEtapa implements IConsultarEtapaActual {
      * Método para actualizar la etapa de elaboración de la uva
      * @version 1.0, 8/9/2023
      * @author Paulina Suden
+     * @see Vino
      * */
 
     public static void cambiarDeEtapa(ArrayList<Vino> listaVinos) {
@@ -99,6 +100,6 @@ public class CambiarEtapa implements IConsultarEtapaActual {
         CambiarEtapa consultador = new CambiarEtapa();
         consultador.consultarEtapa(listaVinos, vino);
     }
-
+//crear una instancia de cambiarEtapa y de ahi llamar al metodo
 
 }
