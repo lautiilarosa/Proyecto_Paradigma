@@ -16,12 +16,9 @@ public class ConsultarTerminados implements IConsultarEtapaActual {
      * @see Vino
      * @param listaVinos : lista de todos los objetos vinos ingresados por el usuario
      */
-    public static void consultarEtapaT(ArrayList<Vino> listaVinos) {
-        ConsultarTerminados obj = new ConsultarTerminados();
-        obj.consultarEtapa(listaVinos); // Llamada de instancia desde el objeto
-    }
     @Override
     public void consultarEtapa(ArrayList<Vino> listaVinos){
+        IConsultarEtapaActual.super.consultarEtapa(listaVinos);
         boolean terminados=false;
         for (Vino vino : listaVinos){
             if (vino.getEtapa() == 10){

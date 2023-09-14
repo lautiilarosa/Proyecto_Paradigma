@@ -15,21 +15,14 @@ public class ConsultarEtapaActual implements IConsultarEtapaActual {
 
     /**
      * Método consultarEtapa() para informarle al usuario la etapa actual de elaboración de una uva en específico
-     * @version 1.1, 9/9/2023
-     * @see Vino
-     * @author Paulina Suden  */
-
-    public static void consultarEtapaS(ArrayList<Vino> listaVinos) {
-        ConsultarEtapaActual obj = new ConsultarEtapaActual();
-        obj.consultarEtapa(listaVinos); // Llamada de instancia desde el objeto
-    }
-
-    /**
-     * Implementación del método consultarEtapa para mostrar el atributo estados de un objeto vino
      * En este caso se consulta ese atributo para todos los vinos
      * @param listaVinos : lista de todos los objetos vinos ingresados por el usuario
+     * @see Vino
      */
+
+    @Override
     public void consultarEtapa(ArrayList<Vino> listaVinos){
+        IConsultarEtapaActual.super.consultarEtapa(listaVinos);
         for (Vino vino : listaVinos){
             EtapasEnum etapa = EtapasEnum.values()[vino.getEtapa()-1];
             System.out.println("Etapa actual de elaboración del vino " +vino.uva.getNombreUva() +" de id "+vino.getId() +" es: " +etapa);

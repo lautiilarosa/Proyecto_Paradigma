@@ -61,7 +61,8 @@ public class Menu {
                     if (!ingresoUva){
                         System.out.println("Por favor, primero ingrese una uva");
                     } else {
-                        ConsultarEtapaActual.consultarEtapaS(vinoSabroso.getListaVinos());
+                        ConsultarEtapaActual consultarE = new ConsultarEtapaActual();
+                        consultarE.consultarEtapa(vinoSabroso.getListaVinos());
                         try {
                             Thread.sleep(2000); // Pausa durante 5 segundos
                         } catch (InterruptedException e) {
@@ -74,7 +75,8 @@ public class Menu {
                     if (!ingresoUva){
                         System.out.println("Por favor, primero ingrese una uva");
                     } else {
-                        CambiarEtapa.cambiarDeEtapa(vinoSabroso.getListaVinos());
+                        CambiarEtapa cambiarE = new CambiarEtapa();
+                        cambiarE.cambiarDeEtapa(vinoSabroso.getListaVinos());
                         try {
                             Thread.sleep(2000); // Pausa durante 2 segundos
                         } catch (InterruptedException e) {
@@ -93,7 +95,8 @@ public class Menu {
                     }
                     break;
                 case 5:
-                    ConsultarTerminados.consultarEtapaT(vinoSabroso.getListaVinos());
+                    ConsultarTerminados consultarTerminado = new ConsultarTerminados();
+                    consultarTerminado.consultarEtapa(vinoSabroso.getListaVinos());
                     try {
                         Thread.sleep(2000); // Pausa durante 2 segundos
                     } catch (InterruptedException e) {

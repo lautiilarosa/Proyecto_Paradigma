@@ -14,7 +14,7 @@ import Interfaces.IConsultarEtapaActual;
  */
 public class CambiarEtapa implements IConsultarEtapaActual {
     //Contructor
-    public static void cambiarEtapa(){}
+    public void cambiarEtapa(){}
 
     /**
      * Método para actualizar la etapa de elaboración de la uva
@@ -23,7 +23,7 @@ public class CambiarEtapa implements IConsultarEtapaActual {
      * @see Vino
      * */
 
-    public static void cambiarDeEtapa(ArrayList<Vino> listaVinos) {
+    public void cambiarDeEtapa(ArrayList<Vino> listaVinos) {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingrese el vino que quiere cambiarle la etapa");
         int cont = 1;
@@ -70,7 +70,7 @@ public class CambiarEtapa implements IConsultarEtapaActual {
                         vino.setEtapa(newEtapa);
                         //ConsultarEtapaActual consultaEtapa = new ConsultarEtapaActual();
                         System.out.println("Excelente!");
-                        consultarEtapaA(listaVinos,vino);
+                        consultarEtapa(listaVinos,vino);
                         //ConsultarEtapaActual.consultarEtapa(listaVinos);
                     } else {
                         System.out.println("Por favor, ingrese una etapa válida (opción mayor a " +vino.getEtapa() +" y hasta 10)");
@@ -96,10 +96,5 @@ public class CambiarEtapa implements IConsultarEtapaActual {
 
     }
 
-    public static void consultarEtapaA(ArrayList<Vino> listaVinos, Vino vino) {
-        CambiarEtapa consultador = new CambiarEtapa();
-        consultador.consultarEtapa(listaVinos, vino);
-    }
-//crear una instancia de cambiarEtapa y de ahi llamar al metodo
 
 }

@@ -21,7 +21,7 @@ public class Albarinio extends Uva{
      * Implementación del método abstracto imprimirInformacion
      */
     @Override
-    public static void imprimirInformacion() {
+    public void imprimirInformacion() {
         System.out.println("La uva "+nombreUva+" tiene las siguientes características:");
         System.out.println("");
         super.imprimirInformacion();
